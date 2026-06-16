@@ -1,0 +1,6 @@
+{
+  "name": "1A2B 猜數字遊戲",
+  "description": "支援多人連線同步、輪流出題猜密碼、即時計分排行榜與聊天室之科技感黑底深色模式 1A2B 猜數字網頁應用程式。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

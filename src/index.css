@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-cyber: "Share Tech Mono", monospace;
+}
+
+/* Custom CSS Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.3);
+  border-radius: 9px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.6);
+}
+
+/* Sci-fi Scanline background pattern overlay */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Cyberpunk terminal text glow and animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(34, 197, 94, 0.5), 0 0 10px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.5);
+  }
+}
+
+.glow-green {
+  animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseRed {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(239, 68, 68, 0.5), 0 0 10px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(239, 68, 68, 0.8), 0 0 20px rgba(239, 68, 68, 0.5);
+  }
+}
+
+.glow-red {
+  animation: pulseRed 3s infinite;
+}
+
+@keyframes cyberFlash {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.cyber-flash {
+  animation: cyberFlash 1.5s infinite;
+}
